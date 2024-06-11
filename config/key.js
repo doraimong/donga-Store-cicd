@@ -1,0 +1,6 @@
+// index.js?† mongoose.connect("mongodb://localhost:27017/") ?† ì£¼ì†Œ?— ? •ë³? ë³´ì•ˆ?„ ?œ„?•´ ?™¸ë¶??— ?“œ?Ÿ¬?‚˜ì§? ?•Š?„ë¡? ?•˜?Š”?° local?¼?•Œ dev, ë°°í¬ ?›„?—?Š” prod?—?„œ ???ì²˜ë?¼í•œ?‹¤.
+if (process.env.NODE_ENV === "production") {
+  module.exports = require("./prod");
+} else {
+  module.exports = require("./dev");
+}
